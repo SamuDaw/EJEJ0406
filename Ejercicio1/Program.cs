@@ -97,6 +97,10 @@ namespace EJE0406
                 for (int i = 0; i < cantidadProductos; i++)
                 {
                     Console.Write("\nProducto: {0}  Precio inicial: {1:f2}  Precio final:  {2:f2} ", productos[i], precios[i], nuevosPrecios[i]);
+					if (nuevosPrecios[i] == 0)
+					{
+						Console.Write(" ¡GRATIS!");
+					}
                     precioTotalFinal += nuevosPrecios[i];
                 }
             }
@@ -111,7 +115,7 @@ namespace EJE0406
             }
 
 			//Salida de precio final
-			Console.WriteLine("\nPrecio total a pagar: {0}", precioTotalFinal);
+			Console.WriteLine("\nPrecio total a pagar: {0:f2} euros", precioTotalFinal);
         }
 	}
 }
